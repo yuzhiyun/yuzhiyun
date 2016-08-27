@@ -84,22 +84,25 @@
 
 
 
-<meta name="description" content="###用途    通过adb，电脑就可以直接在cmd下输入命令，来控制手机了，可以开启一个activty、service之类的。
-###举例打开百度页面：1、手机通过数据线连接到电脑上2、输入adb shell3、输入 am start -a android.intent.action.VIEW -d http://www.baidu.com4、手机自动会打开浏览器，来到百度页面
-###知识普及A">
+<meta name="description" content="用途通过adb，电脑就可以直接在cmd下输入命令，来控制手机了，可以开启一个activty、service之类的。
+举例打开百度页面：1、手机通过数据线连接到电脑上2、输入adb shell3、输入 am start -a android.intent.action.VIEW -d http://www.baidu.com4、手机自动会打开浏览器，来到百度页面
+知识普及AM命令
+Android系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="俞志云">
 <meta property="og:url" content="http://yoursite.com/2016/08/27/好玩的adb/index.html">
 <meta property="og:site_name" content="俞志云">
-<meta property="og:description" content="###用途    通过adb，电脑就可以直接在cmd下输入命令，来控制手机了，可以开启一个activty、service之类的。
-###举例打开百度页面：1、手机通过数据线连接到电脑上2、输入adb shell3、输入 am start -a android.intent.action.VIEW -d http://www.baidu.com4、手机自动会打开浏览器，来到百度页面
-###知识普及A">
-<meta property="og:updated_time" content="2016-08-27T12:46:46.559Z">
+<meta property="og:description" content="用途通过adb，电脑就可以直接在cmd下输入命令，来控制手机了，可以开启一个activty、service之类的。
+举例打开百度页面：1、手机通过数据线连接到电脑上2、输入adb shell3、输入 am start -a android.intent.action.VIEW -d http://www.baidu.com4、手机自动会打开浏览器，来到百度页面
+知识普及AM命令
+Android系统">
+<meta property="og:updated_time" content="2016-08-27T12:58:46.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="俞志云">
-<meta name="twitter:description" content="###用途    通过adb，电脑就可以直接在cmd下输入命令，来控制手机了，可以开启一个activty、service之类的。
-###举例打开百度页面：1、手机通过数据线连接到电脑上2、输入adb shell3、输入 am start -a android.intent.action.VIEW -d http://www.baidu.com4、手机自动会打开浏览器，来到百度页面
-###知识普及A">
+<meta name="twitter:description" content="用途通过adb，电脑就可以直接在cmd下输入命令，来控制手机了，可以开启一个activty、service之类的。
+举例打开百度页面：1、手机通过数据线连接到电脑上2、输入adb shell3、输入 am start -a android.intent.action.VIEW -d http://www.baidu.com4、手机自动会打开浏览器，来到百度页面
+知识普及AM命令
+Android系统">
 
 
 
@@ -282,9 +285,9 @@
       
 
       
-        <p>###用途<br>    通过adb，电脑就可以直接在cmd下输入命令，来控制手机了，可以开启一个activty、service之类的。</p>
-<p>###举例<br>打开百度页面：<br>1、手机通过数据线连接到电脑上<br>2、输入adb shell<br>3、输入 am start -a android.intent.action.VIEW -d <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a><br>4、手机自动会打开浏览器，来到百度页面</p>
-<p>###知识普及<br>AM命令</p>
+        <h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><pre><code>通过adb，电脑就可以直接在cmd下输入命令，来控制手机了，可以开启一个activty、service之类的。
+</code></pre><h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><p>打开百度页面：<br>1、手机通过数据线连接到电脑上<br>2、输入adb shell<br>3、输入 am start -a android.intent.action.VIEW -d <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a><br>4、手机自动会打开浏览器，来到百度页面</p>
+<h3 id="知识普及"><a href="#知识普及" class="headerlink" title="知识普及"></a>知识普及</h3><p>AM命令</p>
 <pre><code>Android系统提供的adb工具，在adb的基础上执行adb shell就可以直接对android系统执行shell命令
 
 am命令可以用start子命令，和带指定的参数，start是子命令，不是参数
@@ -292,7 +295,7 @@ am命令可以用start子命令，和带指定的参数，start是子命令，�
 am命令的源码在Am.java中，在shell环境下执行am命令实际是启动一个线程执行Am.java中的主函数（main方法），am命令后跟的参数都会当做运行时参数传递到主函数中，主要实现在Am.java的run方法中。
 
 常见参数：-a:表示动作，-d：表示携带的数据，-t:表示传入的类型，-n:指定的组件名    
-</code></pre><p>###原文链接<br><a href="http://blog.csdn.net/allen315410/article/details/42521251" target="_blank" rel="external">http://blog.csdn.net/allen315410/article/details/42521251</a></p>
+</code></pre><h3 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h3><p><a href="http://blog.csdn.net/allen315410/article/details/42521251" target="_blank" rel="external">http://blog.csdn.net/allen315410/article/details/42521251</a></p>
 
       
     </div>
@@ -437,7 +440,7 @@ var duoshuoQuery = {short_name:"yuzhiyun"};
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#用途"><span class="nav-number">1.</span> <span class="nav-text">用途</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#举例"><span class="nav-number">2.</span> <span class="nav-text">举例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识普及"><span class="nav-number">3.</span> <span class="nav-text">知识普及</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原文链接"><span class="nav-number">4.</span> <span class="nav-text">原文链接</span></a></li></ol></div>
             
           </div>
         </section>
