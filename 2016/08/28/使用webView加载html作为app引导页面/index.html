@@ -84,12 +84,24 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="用html的理由引导页用原生的Android开发也可以做，为何要用html呢？这么麻烦，岂不是增加开发复杂度？其实不是的，我觉得使用webview+html原因有二：
+1、动画效果因为html结合javascript、css等可以做出一些非常漂亮的动画效果，但是如果用原生开发，机会很难实现。
+2、分工团队开发，可以让对html掌握的比较好的同事负责这一部分的开发，原生开发的人就专心开发其他的功能，">
+<meta property="og:type" content="article">
 <meta property="og:title" content="俞志云">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/08/28/使用webView加载html作为app引导页面/index.html">
 <meta property="og:site_name" content="俞志云">
+<meta property="og:description" content="用html的理由引导页用原生的Android开发也可以做，为何要用html呢？这么麻烦，岂不是增加开发复杂度？其实不是的，我觉得使用webview+html原因有二：
+1、动画效果因为html结合javascript、css等可以做出一些非常漂亮的动画效果，但是如果用原生开发，机会很难实现。
+2、分工团队开发，可以让对html掌握的比较好的同事负责这一部分的开发，原生开发的人就专心开发其他的功能，">
+<meta property="og:image" content="http://img.blog.csdn.net/20160828214006775">
+<meta property="og:updated_time" content="2016-08-28T13:41:20.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="俞志云">
+<meta name="twitter:description" content="用html的理由引导页用原生的Android开发也可以做，为何要用html呢？这么麻烦，岂不是增加开发复杂度？其实不是的，我觉得使用webview+html原因有二：
+1、动画效果因为html结合javascript、css等可以做出一些非常漂亮的动画效果，但是如果用原生开发，机会很难实现。
+2、分工团队开发，可以让对html掌握的比较好的同事负责这一部分的开发，原生开发的人就专心开发其他的功能，">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160828214006775">
 
 
 
@@ -110,9 +122,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/28/使用webView加载html作为app引导页面/"/>
 
-  <title> 俞志云 </title>
+  <title>  | 俞志云 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -133,9 +145,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -212,9 +222,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -235,9 +245,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/08/28/使用webView加载html作为app引导页面/" itemprop="url">
-                  Unbenannt
-                </a>
               
             
           </h1>
@@ -277,9 +284,7 @@
       
 
       
-        
-          
-            <h2 id="用html的理由"><a href="#用html的理由" class="headerlink" title="用html的理由"></a>用html的理由</h2><p>引导页用原生的Android开发也可以做，为何要用html呢？这么麻烦，岂不是增加开发复杂度？<br>其实不是的，我觉得使用webview+html原因有二：</p>
+        <h2 id="用html的理由"><a href="#用html的理由" class="headerlink" title="用html的理由"></a>用html的理由</h2><p>引导页用原生的Android开发也可以做，为何要用html呢？这么麻烦，岂不是增加开发复杂度？<br>其实不是的，我觉得使用webview+html原因有二：</p>
 <h3 id="1、动画效果"><a href="#1、动画效果" class="headerlink" title="1、动画效果"></a>1、动画效果</h3><p>因为html结合javascript、css等可以做出一些非常漂亮的动画效果，但是如果用原生开发，机会很难实现。</p>
 <h3 id="2、分工"><a href="#2、分工" class="headerlink" title="2、分工"></a>2、分工</h3><p>团队开发，可以让对html掌握的比较好的同事负责这一部分的开发，原生开发的人就专心开发其他的功能，而不是纠结于如何实现这种好看的效果。</p>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="启动页代码"><a href="#启动页代码" class="headerlink" title="启动页代码"></a>启动页代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">public class WebViewActivity extends Activity &#123;</div><div class="line">	private WebView myWebView;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">		super.onCreate(savedInstanceState);</div><div class="line">		setContentView(R.layout.webview);</div><div class="line"></div><div class="line">		myWebView = (WebView) findViewById(R.id.myWebView);</div><div class="line">		myWebView.getSettings().setJavaScriptEnabled(true);</div><div class="line">		// 与js交互，JavaScriptinterface 是个接口，与js交互时用到的，这个接口实现了从网页跳到app中的activity 的方法，特别重要</div><div class="line">		myWebView.addJavascriptInterface(new JavaScriptinterface(this), &quot;android&quot;);</div><div class="line">		myWebView.loadUrl(&quot;file:///android_asset/index.html&quot;);</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -289,16 +294,20 @@
 <h3 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h3><p>1、html、css等文件是放在assets文件夹下的，通过webview加载。<br>2、<a href="https://github.com/yuzhiyun/WebViewIndicatorPager" target="_blank" rel="external">源代码以及apk</a><br>3、还有一个更炫的例子，<a href="http://www.cnblogs.com/codingblock/p/4742580.html" target="_blank" rel="external">原文链接</a></p>
 <h3 id="最后一页效果如图："><a href="#最后一页效果如图：" class="headerlink" title="最后一页效果如图："></a>最后一页效果如图：</h3><p><img src="http://img.blog.csdn.net/20160828214006775" alt="这里写图片描述"></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -306,316 +315,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/08/27/hexo博客的一些小问题/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/08/27/hexo博客的一些小问题/" itemprop="url">
-                  Unbenannt
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-08-27T21:05:10+08:00" content="2016-08-27">
-              2016-08-27
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h3 id="hexo博客的一些小问题"><a href="#hexo博客的一些小问题" class="headerlink" title="hexo博客的一些小问题"></a>hexo博客的一些小问题</h3><p>1、markdown 语法的#后面如果没有加上空格， 在hexo上面显示会有问题，会直接 显示出来 #号<br>2、md文件在hexo 中无法显示title,暂时不知如何解决，，，稍等</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/27/好玩的adb/" itemprop="url">
-                  Unbenannt
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-08-27T20:47:26+08:00" content="2016-08-27">
-              2016-08-27
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><pre><code>通过adb，电脑就可以直接在cmd下输入命令，来控制手机了，可以开启一个activty、service之类的。
-</code></pre><h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><p>打开百度页面：<br>1、手机通过数据线连接到电脑上<br>2、输入adb shell<br>3、输入 am start -a android.intent.action.VIEW -d <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a><br>4、手机自动会打开浏览器，来到百度页面</p>
-<h3 id="知识普及"><a href="#知识普及" class="headerlink" title="知识普及"></a>知识普及</h3><p>AM命令</p>
-<pre><code>Android系统提供的adb工具，在adb的基础上执行adb shell就可以直接对android系统执行shell命令
-
-am命令可以用start子命令，和带指定的参数，start是子命令，不是参数
-
-am命令的源码在Am.java中，在shell环境下执行am命令实际是启动一个线程执行Am.java中的主函数（main方法），am命令后跟的参数都会当做运行时参数传递到主函数中，主要实现在Am.java的run方法中。
-
-常见参数：-a:表示动作，-d：表示携带的数据，-t:表示传入的类型，-n:指定的组件名    
-</code></pre><h3 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h3><p><a href="http://blog.csdn.net/allen315410/article/details/42521251" target="_blank" rel="external">http://blog.csdn.net/allen315410/article/details/42521251</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/26/me/" itemprop="url">
-                  Unbenannt
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-08-26T22:43:31+08:00" content="2016-08-26">
-              2016-08-26
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>##Brief Introduction</p>
-<p><strong>School:</strong>       CSU(中南大学)</p>
-<p><strong>Profession:</strong> Software engineering</p>
-<p><strong>Birthday:</strong>    1996/03/29</p>
-<p><strong>ITeye website:</strong> <a href="http://2723364262.iteye.com/" target="_blank" rel="external">my technology blog about software development </a></p>
-<p><strong>QQ:</strong> 2723364262<br><strong>Wechat:</strong> 15111356294<br><strong>Wechat Public Account:</strong> yuzhiyun<br><img src="http://img.blog.csdn.net/20160826223609055" alt="这里写图片描述"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -623,6 +348,23 @@ am命令的源码在Am.java中，在shell环境下执行am命令实际是启动�
 
 
           
+  <!-- 多说评论框 start -->
+ 		<div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="http://www.yuzhyun.me/<%- page.permalink %>"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"yuzhiyun"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
 
         </div>
         
@@ -642,8 +384,17 @@ am命令的源码在Am.java中，在shell环境下执行am命令实际是启动�
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -679,6 +430,17 @@ am命令的源码在Am.java中，在shell环境下执行am命令实际是启动�
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用html的理由"><span class="nav-number">1.</span> <span class="nav-text">用html的理由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、动画效果"><span class="nav-number">1.1.</span> <span class="nav-text">1、动画效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、分工"><span class="nav-number">1.2.</span> <span class="nav-text">2、分工</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#启动页代码"><span class="nav-number">2.1.</span> <span class="nav-text">启动页代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其中的接口实现为："><span class="nav-number">2.2.</span> <span class="nav-text">其中的接口实现为：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#index-html中关键代码（调用接口中定义的startActivity方法）"><span class="nav-number">2.3.</span> <span class="nav-text">index.html中关键代码（调用接口中定义的startActivity方法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注："><span class="nav-number">2.4.</span> <span class="nav-text">注：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后一页效果如图："><span class="nav-number">2.5.</span> <span class="nav-text">最后一页效果如图：</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -775,6 +537,10 @@ am命令的源码在Am.java中，在shell环境下执行am命令实际是启动�
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
